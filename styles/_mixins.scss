@@ -20,7 +20,7 @@
     text-transform: uppercase;
     color: #4E7575;
 }
-@mixin flex_right_card {
+@mixin flex_section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;

@@ -23,45 +23,163 @@
     }
     .calculator{
         max-width: 920px;
-        max-height: 485px;
+        height: fit-content;
         background-color: $calc-bg-color;
         padding: 30px;
         border-radius: 25px;
         box-shadow: 0px 19px 29px 6px #B2D9DC;
         @include flex_space;
-        .calculator__section_left{
-            @include flex_center;
-            color: $left-sec-color;
+
+        //right section styling
+        input[type="text"]{
+            width: 90%;
+            border-style: none;
+            height: 40px;
+            cursor: pointer;
+            text-align: right;
+            font-family: $font-family;
+            color: #00474B;
             font-weight: bold;
-            font-size: $font-size;
+            font-style: 48px;
+        }
+        input:active{
+            border: none;
+            color: rgb(209, 255, 253);
         }
         .calculator__section_right{
-            max-width: 413px;
-            max-height: 413px;
+            width: 375px;
+            height: 375px;
             background-color: $rt-sec-color;
             padding: 30px;
             border-radius: 13px;
-            @include flex_right_card;
-            .tip_amount{
+            @include flex_section;
+            .calculator__section_right-tip{
+                width: 100%;
                 display: flex;
-                flex-direction: row;
-                align-items: center;
-                flex-wrap: wrap;
-                justify-content: space-between;
+                flex-direction: column;
+                justify-content: flex-start;
+                .white_text{
+                    color: #fff;
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.1em;
+                }
+                .grey_text{
+                    color:#9EBBBD;
+                }
+                .green_price{
+                    color:#26C2AD;
+                    font-size: 48px;
+                    font-weight: bold;
+                    padding-left: 30px;
+
+                }
+                .tip_amount{
+                    // height: 30%;
+                    margin-top: 5px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+                .tip_total{
+                    // height: 30%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
             }
-            .tip_total{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
-            .tip_color{
-                color: #fff;
-            }
-            .tip_color-grey{
-                color: #9EBBBD;
+            .submit{
+                height: 60px;
+                width: 100%;
+            .submit_button{
+                width: 100%;
+                background-color: #26C2AD;
+                border: none;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 20px;
+                line-height: 30px;
+                color: #065257;
+                font-weight: bold;
+                text-transform: uppercase;
+                border-radius: 5px;
             }
         }
     }
+    
+    //left section styling
+    .calculator__section_left{
+        max-width: 430px;
+        max-height: 430px;
+        @include flex_section;
+        padding: 30px;
+        color: $left-sec-color;
+        font-weight: bold;
+        font-size: $font-size;
+        .section__left_people{
+            width: 100%;
+        }
+        .section__left_people-input{
+            
+            img{
+                width: 13px;
+                height: 16px;
+                margin-left: 10px;
+            }
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .section__left_bill{
+            .dollar{
+                color: #9EBBBD;
+                font-size: 24px;
+                margin-left: 10px;
+            }
+            width: 100%;
+            .dollar_tex{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+    .section__left_tip-percent{
+        font-family: $font-family;
+        display: grid;
+        grid-template-columns: 124px 124px 124px; 
+        grid-column-gap: 14px;
+        grid-row-gap: 14px;
+        .button_custom{
+            background-color: #fff;
+            border: none;
+            font-family: $font-family;
+            font-size: 24px;
+            font-weight: bold;
+            color: #065257;
+        }
+        .button{
+            text-align: center;
+            font-family: $font-family;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            background-color:#00474B;
+            border: none;
+            border-radius: 4px;
+            padding: 15px 30px;
+            
+        }
+    }
+}
 }
