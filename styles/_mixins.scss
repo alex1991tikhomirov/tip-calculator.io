@@ -24,3 +24,9 @@
     align-items: center;
     justify-content: space-between;
 }
+@mixin flex_grid_phone {
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    justify-items: center;
+}
