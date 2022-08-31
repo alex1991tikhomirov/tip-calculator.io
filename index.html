@@ -22,7 +22,7 @@
                 <form action="#" class="section__left_bill">
                     <p>Bill</p>
                     <label for="bill" class="dollar">$</label>
-                    <input style='font-size: 24px' id="bill" type="text" name="bill" placeholder="Bill" data-required="true" oninput=myFunc()>
+                    <input style='font-size: 24px' id="bill" type="text" name="bill" placeholder="Bill" data-required="true" value="10">
                </form>
                 <div class="section__left_tip">
                     <p>Select Tip %</p>
@@ -43,34 +43,34 @@
                             <span class="percent">50%</span>
                         </button>
                         <button class="button_custom">
-                            <span id="custom">Custom</span>
+                            <span id="custom" onclick="calculateTip()">Custom</span>
                         </button>
                     </div>
                 </div>
                <form action="#" class="section__left_people">
                     <p>Number of People</p>
                     <label for="person"><img src="images/icon-person.svg" alt="person icon"></label>
-                    <input style='font-size: 24px' id="person" type="text" placeholder="People">
+                    <input style='font-size: 24px' id="person" type="text" placeholder="People" value="1">
                </form>
             </section>
             <!--The end of left section of calculator desktop version-->
 
             <!--Begining of right section of calculator desktop version-->
-            <section class="calculator__section_right">
+            <form class="calculator__section_right">
                 <div class="calculator__section_right-tip">
                     <div class="tip_amount">
                         <p><span class="white_text">Tip amount</span><br><span class="grey_text">/ person</span></p>
-                        <p><span class="green_price">$4.27</span></p>
+                        <p><span id="tipPerPerson"class="green_price">$4.27</span></p>
                     </div>
                     <div class="tip_total">
                         <p><span class="white_text">Total</span><br><span class="grey_text">/ person</span></p>
-                        <p><span class="green_price">$32.79</span></p>
+                        <p><span id="tipTotal" class="green_price">$32.79</span></p>
                     </div>
                 </div>
                 <div class="submit">
-                    <button class="submit_button">reset</button>
+                    <button type="reset" value="reset" id="reset" class="reset_button">reset</button>
                 </div>
-            </section>
+            </form>
             <!--The end of right section of calculator desktop version-->
         </div>
     </div>
