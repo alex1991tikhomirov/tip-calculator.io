@@ -6,15 +6,12 @@
     flex-wrap: wrap;
 
 }
-@mixin flex_space {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+@mixin flex_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 @mixin header-style {
-    font-size: 1em;
+    font-size: 16px;
     line-height: 40px;
     letter-spacing: 0.43em;
     text-transform: uppercase;
