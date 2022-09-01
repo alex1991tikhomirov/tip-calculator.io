@@ -30,3 +30,10 @@
     justify-content: center;
     justify-items: center;
 }
+@mixin bodyStyle {
+        @media (max-width:850){
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+}

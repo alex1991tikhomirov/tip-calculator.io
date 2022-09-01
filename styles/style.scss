@@ -5,16 +5,20 @@
 //import fonts
 @import url(https://fonts.googleapis.com/css?family=Space+Mono:regular400,700,700italic);
 
-//styling
 body{
-    width: 100vw;
-    height: 100%;
+    width: 100%;
+    height: vh;
     margin: 0;
     padding: 0;
+
+    @media(max-width: 850px){
+       height: 100%;
+    }
 }
+//styling
 .page{
     width: 100%;
-    height:100%;
+    height:100vh;
     background-color: $page-color;
     font-family: $font-family;
     display: grid;
@@ -23,6 +27,9 @@ body{
     justify-content: center;
     justify-items: center;
     align-content: center;
+    @media(max-width: 850px){
+        height: 100%;
+     }
     .header{
         @include header-style;
         margin-bottom: 30px;
